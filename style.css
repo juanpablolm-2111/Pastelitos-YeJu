@@ -1,0 +1,784 @@
+/* Elimina los márgenes y espacios predeterminados del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración general de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f5;
+    color: #333333;
+}
+
+/* Configuración de nuestra barra de navegación */
+header {
+    background-color: white;
+}
+
+/* Organizamos los elementos del menú */
+nav {
+    display: flex;
+    justify-content: space-between; /*Distribuye los elementos dejando espacio entre ellos*/
+    align-items: center; /*Alineamos los elementos verticalmente al centro de la pagina*/
+    padding: 15px 50px;
+}
+
+/* Tamaño del logo */
+.logo img {
+    width: 120px;
+}
+
+/* Quitamos los puntos de la lista */
+nav ul {
+    list-style: none; /*Elimina los puntos (°) en la lista original*/
+    display: flex; /*Organiza los elementos que estaban en la lista en una fila horizontal*/
+    gap: 30px; /*Espaciado entre cada elemento de la lista original*/
+}
+
+/* Estilo de los enlaces */
+nav a {
+    text-decoration: none; /*Elimina el subrayado tipico de los enlaces*/
+    color: #333333;
+    font-weight: bold; /*Texto en negritas*/
+}
+
+/* ============================= */
+/* SECCIÓN PRINCIPAL              */
+/* ============================= */
+
+#inicio {
+/* Configuración de la sección principal */
+    min-height: 80vh;
+    /* Ocupa como mínimo el 80% de la altura de la pantalla */
+
+    display: flex;
+    /* Activa Flexbox para organizar los elementos */
+
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+
+    align-items: center;
+    /* Centra los elementos verticalmente */
+
+    gap: 80px;
+    /* Crea separación entre el texto y la imagen */
+
+    padding: 60px 50px;
+    /* Agrega espacio interno a la sección */
+
+    text-align: left;
+    /* Alinea el texto hacia la izquierda */
+}
+
+/* Contenedor del contenido de la portada */
+.hero-content {
+    max-width: 500px;
+    /*Evita que el texto ocupe demasiado espacio*/
+}
+
+/* Texto pequeño sobre el título */
+.hero-subtitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Título principal */
+.hero-content h1 {
+    font-size: 60px;
+    /* Define el tamaño del título */
+
+    margin-bottom: 20px;
+    /* Separa el título del texto siguiente */
+}
+
+/* Descripción */
+.hero-description {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Botón principal */
+.hero-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #d45d79;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* Contenedor de la imagen de la portada */
+.hero-image {
+    margin-top: 0;
+    /* Eliminamos el espacio superior porque ahora está junto al texto */
+}
+
+/* Configuración de la imagen */
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover; 
+    /*La imagen mantiene sus proporciones y recorta la parte que sea necesaria para llenar el espacio.*/
+    border-radius: 20px;
+}
+
+/* Botón del menú móvil */
+.menu-toggle {
+    display: none;
+    /* Ocultamos el botón en computadoras */
+
+    border: none;
+    /* Elimina el borde predeterminado */
+
+    background: none;
+    /* Elimina el fondo predeterminado */
+
+    font-size: 28px;
+    /* Define el tamaño del símbolo ☰ */
+
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* ============================= */
+/* DISEÑO PARA DISPOSITIVOS MÓVILES */
+/* ============================= */
+
+@media (max-width: 768px) {
+    /* Estas reglas se aplican cuando la pantalla mide 768px o menos */
+
+    #inicio {
+        flex-direction: column;
+        /* Coloca el texto y la imagen uno debajo del otro */
+
+        gap: 40px;
+        /* Reduce la separación entre los elementos */
+
+        padding: 50px 20px;
+        /* Reduce el espacio lateral de la sección */
+    }
+
+    .hero-content {
+        max-width: 100%;
+        /* Permite que el contenido utilice todo el ancho disponible */
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+        /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    .hero-description {
+        font-size: 18px;
+        /* Reduce ligeramente el tamaño de la descripción */
+    }
+
+    .hero-image img {
+        width: 280px;
+        height: 280px;
+        /* Reduce el tamaño de la imagen */
+    }
+    
+    .menu-toggle {
+    display: block;
+    /* Muestra el botón en pantallas pequeñas */
+    }
+
+    .nav-links {
+    display: none;
+    /* Oculta los enlaces en el menú móvil */
+    }
+
+    .nav-links.active {
+    display: flex;
+    /* Muestra nuevamente los enlaces cuando el menú está activo */
+
+    flex-direction: column;
+    /* Coloca los enlaces verticalmente */
+
+    gap: 20px;
+    /* Separa los enlaces */
+
+    position: absolute;
+    /* Permite colocar el menú sobre el contenido */
+
+    top: 80px;
+    /* Coloca el menú debajo de la barra */
+
+    right: 20px;
+    /* Lo separa del borde derecho */
+
+    background-color: white;
+    /* Fondo del menú */
+
+    padding: 20px;
+    /* Espacio interno */
+
+    border-radius: 10px;
+    /* Redondea las esquinas */
+    }
+}
+
+/* ============================= */
+/* SECCIÓN DE PRODUCTOS          */
+/* ============================= */
+
+/* Configuración general de la sección */
+#productos {
+    padding: 80px 50px;
+    /* Agrega espacio alrededor del contenido */
+
+    text-align: center;
+    /* Centra el título y el contenido */
+}
+
+/* Título de la sección */
+#productos h2 {
+    font-size: 40px;
+    /* Define el tamaño del título */
+
+    margin-bottom: 50px;
+    /* Separa el título de las tarjetas */
+}
+
+/* Contenedor de las tarjetas */
+.products-container {
+    display: flex;
+    /* Coloca las tarjetas utilizando Flexbox */
+
+    justify-content: center;
+    /* Centra las tarjetas */
+
+    gap: 30px;
+    /* Deja espacio entre cada tarjeta */
+
+    flex-wrap: wrap;
+    /* Permite que las tarjetas bajen de línea cuando ya no caben */
+}
+
+/* Tarjeta individual */
+.product-card {
+    width: 280px;
+    /* Define el ancho de cada tarjeta */
+
+    background-color: white;
+    /* Establece el fondo de la tarjeta */
+
+    border-radius: 15px;
+    /* Redondea las esquinas */
+
+    overflow: hidden;
+    /* Evita que la imagen sobresalga de las esquinas */
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Agrega una sombra ligera */
+
+    transition: transform 0.3s ease;
+    /*Suaviza las animaciones*/
+    animation: aparecer 0.6s ease forwards; 
+    /* Hace que la tarjeta aparezca suavemente */
+}
+
+/* Define la animación que utilizarán las tarjetas */
+@keyframes aparecer {
+    /* Estado inicial de la tarjeta */
+    from {
+        opacity: 0; /* Hace que la tarjeta comience completamente transparente */
+        transform: translateY(20px); /* Comienza 20 píxeles más abajo */
+    }
+
+    /* Estado final de la tarjeta */
+    to {
+        opacity: 1; /* Hace que la tarjeta termine completamente visible */
+        transform: translateY(0); /* Regresa la tarjeta a su posición original */
+    }
+}
+
+/* Imagen de la tarjeta */
+.product-card img {
+    width: 100%;
+    /* Hace que la imagen ocupe todo el ancho de su tarjeta*/
+
+    height: 220px;
+    /* Define la altura de la imagen */
+
+    object-fit: cover;
+    /* Evita deformar la imagen */
+}
+
+/* Información del producto */
+.product-info {
+    padding: 20px;
+    /* Agrega espacio alrededor de la información */
+}
+
+/* Nombre del producto */
+.product-info h3 {
+    font-size: 22px;
+    /* Define el tamaño del nombre */
+
+    margin-bottom: 10px;
+    /* Separa el nombre del precio */
+}
+
+/* Precio */
+.product-price {
+    font-size: 20px;
+    /* Define el tamaño del precio */
+
+    font-weight: bold;
+    /* Hace que el precio destaque */
+}
+
+/* Descripción del producto */
+.product-description {
+    font-size: 15px;
+    /* Define el tamaño de la descripción */
+
+    line-height: 1.5;
+    /* Aumenta la separación entre líneas */
+
+    color: #666666;
+    /* Utiliza un gris para diferenciarla del resto */
+}
+
+/* Botón para ordenar */
+.product-button {
+    margin-top: 15px;
+    /* Separa el botón del precio */
+
+    padding: 10px 20px;
+    /* Agrega espacio dentro del botón */
+
+    border: none;
+    /* Elimina el borde predeterminado */
+
+    background-color: #d45d79;
+    /* Define el color del botón */
+
+    color: white;
+    /* Define el color del texto */
+
+    border-radius: 20px;
+    /* Redondea las esquinas */
+
+    font-weight: bold;
+    /* Hace que el texto destaque */
+
+    cursor: pointer;
+    /* Muestra el cursor de selección */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.product-button:hover {
+    background-color: #b94764;
+    /* Cambia el color cuando el cursor está encima */
+
+    transform: translateY(-2px);
+    /* Mueve ligeramente el botón hacia arriba */
+}
+
+/* Efecto al pasar el mouse sobre una tarjeta */
+.product-card:hover {
+    transform: translateY(-5px);
+    /* Eleva ligeramente la tarjeta */
+}
+
+/* ============================= */
+/* SECCIÓN NOSOTROS               */
+/* ============================= */
+
+/* Configuración general de la sección */
+#nosotros {
+    padding: 80px 50px;
+    /* Agrega espacio alrededor del contenido */
+
+    background-color: white;
+    /* Diferencia visualmente esta sección */
+}
+
+/* Contenedor del contenido */
+.about-content {
+    max-width: 800px;
+    /* Limita el ancho del texto */
+
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+
+    text-align: center;
+    /* Centra el texto */
+}
+
+/* Título de la sección */
+.about-content h2 {
+    font-size: 40px;
+    /* Define el tamaño del título */
+
+    margin-bottom: 30px;
+    /* Separa el título del contenido */
+}
+
+/* Párrafos */
+.about-content p {
+    font-size: 18px;
+    /* Define el tamaño del texto */
+
+    line-height: 1.7;
+    /* Mejora la separación entre líneas */
+
+    margin-bottom: 20px;
+    /* Separa los párrafos */
+}
+
+/* ============================= */
+/* SECCIÓN CONTACTO               */
+/* ============================= */
+
+/* Configuración general */
+#contacto {
+    padding: 80px 50px;
+    /* Agrega espacio alrededor de la sección */
+
+    text-align: center;
+    /* Centra el contenido */
+}
+
+/* Título */
+.contact-content h2 {
+    font-size: 40px;
+    /* Define el tamaño del título */
+
+    margin-bottom: 20px;
+    /* Separa el título del texto */
+}
+
+/* Texto introductorio */
+.contact-content > p {
+    font-size: 18px;
+    /* Define el tamaño del texto */
+
+    margin-bottom: 30px;
+    /* Separa el texto de los datos */
+}
+
+/* Información de contacto */
+.contact-info {
+    display: flex;
+    /* Organiza los datos horizontalmente */
+
+    justify-content: center;
+    /* Centra los elementos */
+
+    gap: 40px;
+    /* Separa los datos */
+}
+
+/* Enlaces de contacto */
+.contact-info a {
+    color: #d45d79;
+    /* Utiliza nuestro color principal */
+
+    text-decoration: none;
+    /* Elimina el subrayado */
+}
+
+/* ============================= */
+/* FOOTER                         */
+/* ============================= */
+
+/* Configuración del pie de página */
+footer {
+    padding: 30px 20px;
+    /* Agrega espacio interno */
+
+    background-color: #333333;
+    /* Define el fondo oscuro */
+
+    color: white;
+    /* Define el color del texto */
+
+    text-align: center;
+    /* Centra el contenido */
+}
+
+/* Texto del footer */
+footer p {
+    font-size: 14px;
+    /* Define un tamaño pequeño para el texto */
+}
+
+/* Hace que la navegación entre secciones sea suave */
+html {
+    scroll-behavior: smooth;
+    /* Suaviza el desplazamiento al usar enlaces internos */
+}
+
+/* ============================= */
+/* MODAL DE PRODUCTO              */
+/* ============================= */
+
+/* Fondo que cubre la pantalla */
+/* Ventana emergente del producto */
+.modal {
+    display: none;
+    /* Oculta el modal inicialmente */
+
+    position: fixed;
+    /* Mantiene el modal fijo en la pantalla */
+
+    top: 0;
+    left: 0;
+    /* Coloca el modal en la esquina superior izquierda */
+
+    width: 100%;
+    height: 100%;
+    /* Hace que cubra toda la pantalla */
+
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Crea un fondo oscuro semitransparente */
+
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+
+    align-items: center;
+    /* Centra el contenido verticalmente */
+
+    z-index: 1000;
+    /* Coloca el modal por encima de otros elementos */
+}
+
+/* Contenido de la ventana */
+.modal-content {
+    position: relative;
+    /* Permite posicionar elementos dentro */
+
+    width: 90%;
+    /* Permite que el modal se adapte a pantallas pequeñas */
+
+    max-width: 500px;
+    /* Limita el tamaño máximo de la ventana */
+
+    background-color: white;
+    /* Establece el fondo blanco */
+
+    padding: 30px;
+    /* Agrega espacio interno */
+
+    border-radius: 15px;
+    /* Redondea las esquinas */
+
+    text-align: center;
+    /* Centra el contenido */
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* Agrega una sombra para darle profundidad */
+
+    animation: aparecer 0.3s ease;
+    /* Hace que la ventana aparezca suavemente */
+}
+
+/* Imagen del producto dentro del modal */
+.modal-product-image {
+    width: 250px;
+    /* Aumenta el tamaño de la imagen */
+
+    max-width: 100%;
+    /* Evita que la imagen sobresalga del modal */
+
+    border-radius: 12px;
+    /* Redondea las esquinas de la imagen */
+
+    margin: 20px 0;
+    /* Agrega espacio arriba y abajo */
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    /* Agrega una sombra ligera a la imagen */
+}
+
+/* Controles de la galería */
+.gallery-controls {
+    display: flex;
+    /* Coloca los elementos en una misma fila */
+
+    justify-content: center;
+    /* Centra los controles */
+
+    align-items: center;
+    /* Alinea verticalmente los elementos */
+
+    gap: 20px;
+    /* Separa los botones y el contador */
+
+    margin-bottom: 20px;
+    /* Separa la galería de la información */
+}
+
+/* Botones anterior y siguiente */
+.gallery-button {
+    border: none;
+    /* Elimina el borde */
+
+    background-color: #f0f0f0;
+    /* Establece un fondo claro */
+
+    width: 35px;
+    height: 35px;
+    /* Define el tamaño del botón */
+
+    border-radius: 50%;
+    /* Convierte el botón en un círculo */
+
+    font-size: 25px;
+    /* Define el tamaño de la flecha */
+
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+
+    transition: transform 0.2s ease;
+    /* Hace suave la animación */
+}
+
+/* Efecto al pasar el mouse por los botones */
+.gallery-button:hover {
+    transform: scale(1.1);
+    /* Aumenta ligeramente el botón */
+}
+
+/* Contador de imágenes */
+#gallery-counter {
+    font-size: 15px;
+    /* Define el tamaño del contador */
+
+    font-weight: bold;
+    /* Hace destacar el contador */
+}
+
+/* Botón para cerrar */
+.modal-close {
+    position: absolute;
+    /* Permite colocarlo sobre la ventana */
+
+    top: 10px;
+    right: 15px;
+    /* Coloca la X en la esquina superior derecha */
+
+    border: none;
+    /* Elimina el borde */
+
+    background: none;
+    /* Elimina el fondo */
+
+    font-size: 28px;
+    /* Define el tamaño de la X */
+
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+
+    transition: transform 0.2s ease;
+    /* Hace suave la animación del botón */
+}
+
+/* Efecto al pasar el mouse sobre la X */
+.modal-close:hover {
+    transform: scale(1.2);
+    /* Aumenta ligeramente el tamaño de la X */
+}
+
+/* Nombre del producto en el modal */
+.modal-product-name {
+    font-size: 30px;
+    /* Define el tamaño del nombre */
+
+    margin-bottom: 10px;
+    /* Separa el nombre de la imagen */
+
+    margin-top: 0;
+    /* Evita espacio innecesario encima del nombre */
+}
+
+/* Descripción del producto en el modal */
+.modal-product-description {
+    font-size: 16px;
+    /* Define el tamaño de la descripción */
+
+    line-height: 1.5;
+    /* Mejora el espacio entre líneas */
+
+    margin-bottom: 15px;
+    /* Separa la descripción del precio */
+}
+
+/* Contenedor de la información adicional */
+.modal-product-info {
+    margin-top: 10px;
+    /* Separa la información de la imagen */
+
+    margin-bottom: 20px;
+    /* Separa la información del precio */
+}
+
+/* Título de la información adicional */
+.modal-product-info-title {
+    font-size: 18px;
+    /* Define el tamaño del título */
+
+    margin-bottom: 8px;
+    /* Separa el título del texto */
+}
+
+/* Precio del producto en el modal */
+.modal-product-price {
+    font-size: 26px;
+    /* Hace que el precio destaque más */
+
+    font-weight: bold;
+    /* Hace el texto más grueso */
+
+    margin-bottom: 10px;
+    /* Agrega espacio debajo */
+}
+
+/* Contenedor de productos relacionados */
+.related-products {
+    margin-top: 20px;
+    /* Separa esta sección del precio */
+}
+
+/* Título de productos relacionados */
+.related-products-title {
+    font-size: 17px;
+    /* Define el tamaño del título */
+
+    margin-bottom: 10px;
+    /* Separa el título de los enlaces */
+}
+
+/* Contenedor de los enlaces */
+.related-products-links {
+    font-size: 15px;
+    /* Define el tamaño de los enlaces */
+
+    line-height: 1.8;
+    /* Agrega espacio entre líneas si los enlaces ocupan varias */
+}
+
+/* Enlaces de productos relacionados */
+.related-product-link {
+    color: #b94764;
+    /* Define el color de los enlaces */
+
+    text-decoration: none;
+    /* Elimina el subrayado inicialmente */
+
+    font-weight: bold;
+    /* Hace destacar los nombres */
+}
+
+/* Efecto al pasar el mouse */
+.related-product-link:hover {
+    text-decoration: underline;
+    /* Muestra un subrayado al pasar el mouse */
+}

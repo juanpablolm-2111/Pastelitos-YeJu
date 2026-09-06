@@ -1,0 +1,192 @@
+<!doctype html>
+<!-- Indica que utilizamos HTML5 -->
+
+<html lang="es">
+  <!-- Inicio del documento HTML y establece español como idioma -->
+
+  <head>
+    <!-- Contiene información y configuración de la página -->
+
+    <meta charset="UTF-8" />
+    <!-- Permite utilizar correctamente caracteres como ñ, á, é, etc. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Permite que la página se adapte correctamente a celulares y otros dispositivos -->
+
+    <title>Pastelitos YeJu</title>
+    <!-- Título que aparecerá en la pestaña del navegador -->
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Conecta nuestro archivo CSS con la página -->
+  </head>
+
+  <body>
+    <!-- Aquí colocaremos todo el contenido visible de la página -->
+
+    <header>
+      <!-- Representa la cabecera de nuestra página -->
+
+      <nav>
+        <!-- Contiene los elementos de navegación -->
+
+        <div class="logo">
+          <!--Contenedor para mostrar el logo-->
+          <img src="images/logo.jpeg" alt="Logo de Pastelitos Yeju" />
+          <!-- Muestra el logo almacenado en la carpeta images -->
+        </div>
+
+        <ul class="nav-links">
+          <!-- Lista que contiene los enlaces de navegación -->
+
+          <li>
+            <a href="#inicio">Inicio</a>
+            <!-- Enlace hacia la sección de inicio -->
+          </li>
+
+          <li>
+            <a href="#productos">Productos</a>
+            <!-- Enlace hacia la sección de productos -->
+          </li>
+
+          <li>
+            <a href="#nosotros">Nosotros</a>
+            <!-- Enlace hacia la sección sobre nosotros -->
+          </li>
+
+          <li>
+            <a href="#contacto">Contacto</a>
+            <!-- Enlace hacia la sección de contacto -->
+          </li>
+        </ul>
+        <button class="menu-toggle">☰</button>
+        <!-- Botón que utilizaremos para abrir y cerrar el menú -->
+      </nav>
+    </header>
+    <main>
+      <!-- Contiene el contenido principal de nuestra página -->
+
+      <section id="inicio">
+        <!-- Sección principal que verá el usuario al entrar -->
+
+        <div class="hero-content">
+          <!-- Contenedor que agrupa el contenido de la portada -->
+
+          <p class="hero-subtitle">Bienvenidos a</p>
+          <!-- Texto pequeño que introduce el nombre del negocio -->
+
+          <h1>Pastelitos YeJu</h1>
+          <!-- Título principal de la página -->
+
+          <p class="hero-description">
+            Endulzamos tus momentos con nuestros deliciosos postres.
+          </p>
+          <!-- Descripción breve del negocio -->
+
+          <a href="#productos" class="hero-button"> Ver nuestros productos </a>
+          <!-- Enlace que funcionará como botón hacia el catálogo -->
+        </div>
+
+        <div class="hero-image">
+          <!-- Contenedor de la imagen principal -->
+
+          <img src="images/product-1.jpg" alt="Producto de Pastelitos Yeju" />
+          <!-- Muestra una imagen del catálogo -->
+        </div>
+      </section>
+
+      <section id="productos">
+        <!-- Sección donde mostraremos nuestro catálogo -->
+
+        <h2>Nuestros productos</h2>
+        <!-- Título de la sección -->
+
+        <div class="products-container" id="products-container">
+          <!-- Contenedor donde JavaScript colocará los productos -->
+        </div>
+      </section>
+
+      <section id="nosotros">
+        <!-- Sección que presenta información sobre Pastelitos Yeju -->
+
+        <div class="about-content">
+          <!-- Contenedor del contenido de la sección -->
+
+          <h2>Sobre nosotros</h2>
+          <!-- Título de la sección -->
+
+          <p>
+            En Pastelitos YeJu nos encanta endulzar momentos especiales con
+            postres preparados con dedicación y mucho cariño.
+          </p>
+          <!-- Descripción del negocio -->
+
+          <p>
+            Creamos nuestros productos pensando en ofrecer una experiencia
+            deliciosa para compartir, celebrar y disfrutar.
+          </p>
+          <!-- Segundo texto descriptivo -->
+        </div>
+      </section>
+
+      <section id="contacto">
+        <!-- Sección con información para contactar al negocio -->
+
+        <div class="contact-content">
+          <!-- Contenedor de la información de contacto -->
+
+          <h2>Contáctanos</h2>
+          <!-- Título de la sección -->
+
+          <p>
+            ¿Tienes alguna pregunta o quieres realizar un pedido? Ponte en
+            contacto con nosotros.
+          </p>
+          <!-- Texto introductorio -->
+
+          <div class="contact-info">
+            <!-- Contenedor de los datos de contacto -->
+
+            <p>
+              <strong>WhatsApp:</strong>
+              <a href="#">312 445 5979 |</a>
+              <a href="#">312 168 3463</a>
+            </p>
+            <!-- Información de WhatsApp -->
+
+            <p>
+              <strong>Instagram:</strong>
+              <a
+                href="https://www.instagram.com/pastelitos_yeju/"
+                target="_blank"
+                >Pastelitos_yeju</a
+              >
+            </p>
+            <!-- Información de Instagram -->
+          </div>
+        </div>
+      </section>
+      <div class="modal" id="product-modal">
+        <!-- Ventana emergente para mostrar información del producto -->
+
+        <div class="modal-content">
+          <!-- Contenido interno de la ventana -->
+
+          <button class="modal-close" id="modal-close">×</button>
+          <!-- Botón para cerrar la ventana -->
+
+          <div id="modal-product">
+            <!-- JavaScript colocará aquí la información del producto -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- Pie de página del sitio -->
+
+      <p>© 2026 Pastelitos Yeju. Todos los derechos reservados.</p>
+      <!-- Información de copyright -->
+    </footer>
+    <script src="script.js"></script>
+    <!-- Conecta el archivo JavaScript con la página -->
+  </body>
+</html>
