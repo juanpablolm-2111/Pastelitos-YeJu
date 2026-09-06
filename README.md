@@ -69,6 +69,3 @@ En futuras versiones podrían incorporarse nuevas funcionalidades conforme aumen
 Juan Pablo López
 
 Proyecto desarrollado como parte de mi portafolio de desarrollo web.
-**Juan Pablo López**
-
-Proyecto desarrollado como parte de mi portafolio de desarrollo web.
